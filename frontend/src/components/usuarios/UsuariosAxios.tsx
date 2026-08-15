@@ -16,8 +16,11 @@ function UsuariosAxios() {
   }, []);
 
   const cargarMusicales = () => {
+    const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:3000/api/musicales")
+      .get("http://localhost:3000/api/musicales", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       .then(res => setMusicales(res.data))
       .catch(error => console.log(error));
   };

@@ -6,10 +6,11 @@ import {
   actualizarMusical,
   eliminarMusical,
 } from "../controllers/musicalController";
+import { verificarToken } from "../middlewares/authMiddlewares";
 
 const router = Router();
 
-router.get("/", obtenerMusicales);
+router.get("/", verificarToken, obtenerMusicales); //agrego la verificacion del token
 router.get("/:id", obtenerMusicalPorId);
 router.post("/", crearMusical);
 router.put("/:id", actualizarMusical);
