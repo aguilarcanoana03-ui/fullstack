@@ -20,7 +20,11 @@ function Signup() {
       navigate("/login");
     } catch (err) {
       console.error(err);
-      setError("No se pudo registrar. Verificá los datos e intentá de nuevo.");
+      if (axios.isAxiosError(err) && err.response?.data?.mensaje) {
+        setError(err.response.data.mensaje);
+      } else {
+        setError("No se pudo registrar. Verificá los datos e intentá de nuevo.");
+      }
     }
   };
 
