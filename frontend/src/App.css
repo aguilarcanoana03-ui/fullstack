@@ -1,0 +1,108 @@
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.users-table th {
+  text-align: left;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 10px;
+}
+
+.users-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-h);
+}
+
+.users-table tr:last-child td {
+  border-bottom: none;
+}
+
+.form-field {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-field label {
+  display: block;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.form-field input:focus {
+  outline: 2px solid var(--accent-border);
+  border-color: var(--accent);
+}
