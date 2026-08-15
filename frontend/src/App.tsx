@@ -3,6 +3,7 @@ import UsuariosPage from "./pages/UsuariosPage";
 import NuevoUsuarioPage from "./pages/NuevoUsuarioPage";
 import EditarMusical from "./components/usuarios/EditarMusical";
 import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/registro" element={<SignupPage />} />
         <Route path="/inicio" element={<UsuariosPage />} />
         <Route
           path="/usuarios"
